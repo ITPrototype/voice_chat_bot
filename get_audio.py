@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 url = "https://voicerss-text-to-speech.p.rapidapi.com/"
 
-querystring = {"key":os.getenv("KEY_VOICE")}
+querystring = {"key":f'{os.getenv("KEY_VOICE")}'}
 
 payload = {
 	"src": "Hello, world!",
