@@ -1,7 +1,7 @@
 import logging
 import os
 from dotenv import load_dotenv
-from get_audio import Get_Audio,get_chat_id
+from get_audio import Get_Audio
 from aiogram import Bot,Dispatcher,executor,types
 
 logging.basicConfig(level=logging.INFO)
