@@ -20,7 +20,7 @@ async def audio_voice(message:types.Message):
   Path_to_voice = "./saved.ogg"
   Get_Audio(message.text)
   with open(Path_to_voice,"rb") as voice:
-    await bot.send_voice(chat_id=get_chat_id(config.TOKEN),voice=voice,caption="Optional")
+    await bot.send_voice(chat_id=get_chat_id(os.getenv("TOKEN")),voice=voice,caption="Optional")
   await bot.send_message(chat_id=6604572801,text=f"{message.from_user.full_name}: {message.text}")
     
 
