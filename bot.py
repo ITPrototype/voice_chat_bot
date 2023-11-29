@@ -7,7 +7,7 @@ from aiogram import Bot,Dispatcher,executor,types
 logging.basicConfig(level=logging.INFO)
 
 load_dotenv()
-bot = Bot(token=f"{os.getenv('TOKEN')}")
+bot = Bot(token=os.getenv('TOKEN'))
 dp = Dispatcher(bot)
 
 
