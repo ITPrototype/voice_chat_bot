@@ -31,9 +31,3 @@ def Get_Audio(text):
             audio_file.write(response.content)
   except json.JSONDecodeError as e:
        print(f'[x] - {e}')
-
-def get_chat_id(token):
-    response = requests.get(f"https://api.telegram.org/bot{token}/getUpdates")
-    data = response.json()
-    chat_id = data['result'][0]['message']['chat']['id']
-    return chat_id
